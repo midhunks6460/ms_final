@@ -6,9 +6,10 @@ export type CategorySection1Type = {
   className?: string;
   rectangle1?: string;
   accordionTitle1?: string;
-  accordionTitle11?: string;
+  accordionTitle11?: string;    
   accordionTitle12?: string;
   accordionTitle13?: string;
+
   icon?: string;
   icon1?: string;
   icon2?: string;

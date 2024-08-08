@@ -71,12 +71,10 @@ const Index: NextPage = () => {
         accordionTitle11="Accordion title 1"
         accordionTitle12="Accordion title 3"
         accordionTitle13="Accordion title 1"
-        accordionTitle14="Accordion title 1"
         icon="/icon.svg"
         icon1="/icon-1.svg"
         icon2="/icon-1.svg"
         icon3="/icon-1.svg"
-        icon4="/icon-1.svg"
       />
       <CategorySection1
         propPadding="247px 40px"
@@ -89,12 +87,10 @@ const Index: NextPage = () => {
         accordionTitle11="Accordion title 1"
         accordionTitle12="Accordion title 3"
         accordionTitle13="Accordion title 1"
-        accordionTitle14="Accordion title 1"
         icon="/icon.svg"
         icon1="/icon-1.svg"
         icon2="/icon-1.svg"
         icon3="/icon-1.svg"
-        icon4="/icon-1.svg"
       />
       <CategorySection1
         onCategorySectionClick={onCategorySectionClick}
@@ -108,12 +104,10 @@ const Index: NextPage = () => {
         accordionTitle11="Accordion title 1"
         accordionTitle12="Accordion title 3"
         accordionTitle13="Accordion title 1"
-        accordionTitle14="Accordion title 1"
         icon="/icon.svg"
         icon1="/icon-1.svg"
         icon2="/icon-1.svg"
         icon3="/icon-1.svg"
-        icon4="/icon-1.svg"
       />
       <CategorySection1
         propPadding="247px 40px"
@@ -126,12 +120,10 @@ const Index: NextPage = () => {
         accordionTitle11="Accordion title 1"
         accordionTitle12="Accordion title 3"
         accordionTitle13="Accordion title 1"
-        accordionTitle14="Accordion title 1"
         icon="/icon.svg"
         icon1="/icon-1.svg"
         icon2="/icon-1.svg"
         icon3="/icon-1.svg"
-        icon4="/icon-1.svg"
       />
       <TestimonialSection />
       <Footer />
