@@ -30,8 +30,6 @@ const CategorySection: NextPage<CategorySectionType> = ({ className = "" }) => {
             "Accordion title 3",
             "Accordion title 4",
             "Accordion title 5",
-            "Accordion title 6",
-            "Accordion title 7",
           ].map((title, index) => (
             <Accordion
               key={index}
