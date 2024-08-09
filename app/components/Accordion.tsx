@@ -33,26 +33,32 @@ const Accordion: NextPage<AccordionType> = ({
   }, [propColor, propFontWeight]);
 
   return (
-    <div>
+    <div
+      className={`border border-gray-300 rounded-lg shadow-md mb-4 ${className} w-full`} // Set width to full
+    >
       <div
-        className={`self-stretch  border-[#e2e4ea] border-b-[0.7px] border-black border-solid box-border flex flex-row items-center justify-start pt-[14px] px-[0px] pb-[13px] gap-[14px] max-w-full text-left text-[16px] text-[#334158] font-[Inter] ${className}`}
+        className={`flex items-center justify-between p-6 cursor-pointer transition-colors duration-200 ${isOpen ? "bg-gray-100" : "bg-white"}`}
         onClick={onToggle} // Use the toggle function
-        style={{ cursor: "pointer" }} // Change cursor to pointer
       >
         <div
-          className="flex-1 relative leading-[24px] inline-block overflow-hidden text-ellipsis whitespace-nowrap max-w-[calc(100%_-_30px)]"
+          className="flex-1 text-left text-[18px] text-[#334158] font-[Inter] overflow-hidden text-ellipsis whitespace-nowrap max-w-[calc(100%_-_30px)]"
           style={accordionTitle1Style}
         >
           {accordionTitle1}
         </div>
         <img
-          className={`h-[16px] w-[16px] relative overflow-hidden shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} // Rotate icon when open
-          alt=""
-          src={icon}
+          className={`h-[20px] w-[20px] transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} // Rotate icon when open
+          alt="Toggle icon"
+          src={isOpen ? "/icon-open.svg" : "/icon.svg"} // Make sure to set the correct icon paths
         />
       </div>
       {isOpen && ( // Render children if the accordion is open
-        <div className="p-4 border border-t-0 border-[#e2e4ea]">{children}</div>
+        <div
+          className={`p-6 border-t border-gray-300 transition-transform duration-200 transform ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+          style={{ overflow: "hidden" }}
+        >
+          <div className="text-[16px] text-[#334158]">{children}</div>
+        </div>
       )}
     </div>
   );

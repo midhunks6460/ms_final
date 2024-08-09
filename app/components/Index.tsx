@@ -32,33 +32,104 @@ const Index: NextPage = () => {
 
   return (
     <div
-      className="w-full relative bg-[#E2E4EA] overflow-hidden flex flex-col items-start justify-start leading-[normal] tracking-[normal]"
+      className="w-full relative bg-[#E2E4EA] overflow-hidden flex flex-col items-start justify-start leading-normal tracking-normal"
       onClick={onMARBLECORENERContainerClick}
     >
       <section className="self-stretch shadow-[0px_3px_16px_rgba(0,_0,_0,_0.08)] rounded-[8px] bg-[#E2E4EA] overflow-hidden flex flex-col md:flex-row items-start justify-start p-[20px] box-border gap-[24px] max-w-full text-left text-[40px] text-[#334158] font-[JejuGothic]">
-        <img
-          className="h-[812px] flex-1 relative rounded-[8px] max-w-full overflow-hidden object-cover min-w-[300px] md:min-w-[603px] md:min-h-[812px]"
-          loading="lazy"
-          alt=""
-          src="/c3.jpg"
-        />
+        <div className="flex-1 relative">
+          <video
+            className="h-[650px] w-full rounded-[8px] max-w-full object-cover hidden md:block"
+            autoPlay
+            loop
+            muted
+          >
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <img
+            src="/c3.jpg" // Replace with your image file
+            alt="Static Image"
+            className="h-[650px] w-full rounded-[8px] object-cover md:hidden"
+          />
+        </div>
         <div
-          className="flex-1 overflow-hidden flex flex-col items-center justify-center py-[80px] px-[20px] md:py-[367px] md:px-[40px] box-border bg-gray-200 border border-black"
+          className="flex-1 flex flex-col items-center justify-center py-[40px] px-[20px] md:py-[200px] md:px-[40px] box-border gap-4 bg-gray-200 border border-black"
           onClick={onFeaturesCarouselContainerClick}
         >
-          <div className="self-stretch flex flex-col items-start justify-start cursor-pointer">
-            <div className="self-stretch flex flex-col items-start justify-start gap-[6px]">
-              <h1 className="m-0 self-stretch relative text-black leading-[120%] font-normal text-[24px] md:text-[40px] md:leading-[48px]">
-                Simple and Clean UIs.
-              </h1>
-              <div className="self-stretch relative text-black text-[16px] leading-[24px] md:text-[25px] md:leading-[30px]">
-                Powerful yet clean UI at your disposal. Build beautiful apps at
-                breakneck speeds.
-              </div>
+          <div className="self-stretch flex flex-col items-start justify-start cursor-pointer gap-[12px]">
+            <h1 className="m-0 self-stretch relative italic text-[#1F2937] leading-[120%] font-bold text-[28px] md:text-[48px] md:leading-[56px]">
+              Experience the Movement.
+            </h1>
+            <div className="self-stretch relative text-[#1F2937] text-[18px] leading-[28px] md:text-[26px] md:leading-[34px]">
+              Immerse yourself in dynamic visuals that enhance your creativity.
+            </div>
+            <div className="self-stretch relative text-[#1F2937] text-[18px] leading-[28px] md:text-[26px] md:leading-[34px]">
+              Discover how our solutions can elevate your projects to the next
+              level.
+            </div>
+            <div className="self-stretch relative text-[#1F2937] text-[18px] leading-[28px] md:text-[26px] md:leading-[34px]">
+              Our platform is designed with users in mind, ensuring a seamless
+              experience.
+            </div>
+            <div className="self-stretch relative text-[#1F2937] text-[18px] leading-[28px] md:text-[26px] md:leading-[34px]">
+              Join a community of innovators who are transforming the digital
+              landscape.
             </div>
           </div>
         </div>
       </section>
+      <div className="w-full flex justify-center items-center h-12 bg-[#E2E4EA] overflow-hidden">
+        <div className="whitespace-nowrap animate-marquee">
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 1 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 2 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 3 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 4 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 5&nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 6 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 7&nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 8&nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 9 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 10&nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 11 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 12&nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 13 &nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 14&nbsp; &nbsp;
+          </span>
+          <span className="text-[#1F2937] font-bold text-[24px]">
+            Product 15 &nbsp; &nbsp;
+          </span>
+        </div>
+      </div>
       <ServiceSection />
       <CategorySection1
         propPadding="247px 40px"

@@ -35,18 +35,15 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
   }, []);
 
   const onCovidAdvisoryTextClick = useCallback(() => {
-    window.location.href =
-      "https://www.google.com/search?q=covid+advisory&sca_esv=1926c2955f272b3e&sxsrf=ADLYWIJ95_LZJ6K-up78PWMlXGp7nk7vhw%3A1723060197955&ei=5c-zZsWAOsSY4-EPke_9-Aw&ved=0ahUKEwiFh5q40-OHAxVEzDgGHZF3H88Q4dUDCBA&uact=5&oq=covid+advisory&gs_lp=Egxnd3Mtd2l6LXNlcnAiDmNvdmlkIGFkdmlzb3J5MgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjaIlD6BFigIHACeAGQAQCYAZ4BoAGkDKoBAzYuObgBA8gBAPgBAZgCEaAC0AyoAhTCAgcQIxgnGOoCwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICChAjGIAEGCcYigXCAgoQABiABBhDGIoFwgINEAAYgAQYsQMYQxiKBcICFhAuGIAEGLEDGNEDGEMYgwEYxwEYigXCAg4QLhiABBixAxiDARiKBcICCxAAGIAEGLEDGIMBwgIFEC4YgATCAgQQIxgnwgIQEAAYgAQYsQMYQxiDARiKBcICCBAAGIAEGLEDwgIHEAAYgAQYCpgDCLoGBggBEAEYAZIHAzguOaAH4mE&sclient=gws-wiz-serp";
+    window.location.href = "https://www.google.com/search?q=covid+advisory";
   }, []);
 
   const onAirlineFeesTextClick = useCallback(() => {
-    window.location.href =
-      "https://www.google.com/search?q=airline+feezs&sca_esv=1926c2955f272b3e&sxsrf=ADLYWIJx8moWB4TIyyITZL6IPPymdwer1A%3A1723060294642&ei=RtCzZujyJvrv4-EP_OKQ-Qs&ved=0ahUKEwjorafm0-OHAxX69zgGHXwxJL8Q4dUDCBA&uact=5&oq=airline+feezs&gs_lp=Egxnd3Mtd2l6LXNlcnAiDWFpcmxpbmUgZmVlenMyBxAAGIAEGA0yBxAAGIAEGA0yBxAAGIAEGA0yBxAAGIAEGA0yBxAAGIAEGA0yBxAAGIAEGA0yBxAAGIAEGA0yBxAAGIAEGA1IiChQzgdYkiZwA3gBkAEDmAGJAaABihCqAQQ1LjE0uAEDyAEA-AEBmAIToAKGDqgCFMICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgIKECMYgAQYJxiKBcICCBAAGIAEGLEDwgIKEAAYgAQYQxiKBcICDRAAGIAEGLEDGEMYigXCAg0QABiABBixAxgUGIcCwgIQEAAYgAQYsQMYQxiDARiKBcICBRAAGIAEwgIHECMYJxjqAsICFhAAGAMYtAIY5QIY6gIYjAMYjwHYAQHCAhYQLhgDGLQCGOUCGOoCGIwDGI8B2AEBwgILEAAYgAQYkQIYigXCAhEQLhiABBixAxjRAxiDARjHAcICBRAuGIAEwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxiDARiKBcICChAuGIAEGCcYigXCAgQQIxgnwgIQEC4YgAQY0QMYQxjHARiKBcICFhAuGIAEGLEDGNEDGEMYgwEYxwEYigXCAhcQLhiABBiKBRiXBRjcBBjeBBjgBNgBAsICERAAGIAEGJECGLEDGMkDGIoFwgILEAAYgAQYkgMYigXCAhAQABiABBixAxhDGMkDGIoFwgIREC4YgAQYxwEYmAUYmQUYrwHCAgsQLhiABBjHARivAcICBxAAGIAEGArCAgoQABiABBixAxgKmAMFiAYBkAYKugYGCAEQARgLugYGCAIQARgUkgcENi4xM6AH1rwB&sclient=gws-wiz-serp";
+    window.location.href = "https://www.google.com/search?q=airline+fees";
   }, []);
 
   const onTipsTextClick = useCallback(() => {
-    window.location.href =
-      "https://www.google.com/search?q=google+tips&sca_esv=1926c2955f272b3e&sxsrf=ADLYWILH311zWU-UEuqaR4Sx5gPMMRvxYw%3A1723060331740&source=hp&ei=a9CzZqakK5KY4-EPjr7p2Qk&iflsig=AL9hbdgAAAAAZrPee-_oN8tWgwl-7wmZaDyrpnuduTqV&ved=0ahUKEwjmhf730-OHAxUSzDgGHQ5fOpsQ4dUDCBk&uact=5&oq=google+tips&gs_lp=Egdnd3Mtd2l6Igtnb29nbGUgdGlwczIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIKEAAYgAQYFBiHAkjrE1AAWJcScAB4AJABAJgBgQGgAekIqgEDNi41uAEDyAEA-AEBmAILoAKECcICChAjGIAEGCcYigXCAgsQABiABBiRAhiKBcICChAAGIAEGEMYigXCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFwgILEAAYgAQYsQMYgwHCAhAQABiABBixAxhDGIMBGIoFwgIEECMYJ8ICDhAAGIAEGJECGLEDGIoFwgITEAAYgAQYsQMYQxiDARjJAxiKBcICCxAAGIAEGJIDGIoFwgIIEAAYgAQYsQPCAg0QABiABBixAxiDARgKmAMA4gMFEgExIECSBwM1LjagB6Fj&sclient=gws-wiz";
+    window.location.href = "https://www.google.com/search?q=google+tips";
   }, []);
 
   const onEntypoSocialfacebookWithCiContainerClick = useCallback(() => {
@@ -63,74 +60,74 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
 
   return (
     <section
-      className={`self-stretch bg-[rgba(240,240,240,1)] flex flex-row flex-wrap items-start justify-center pt-[33px] px-[84px] pb-[40px] box-border gap-[22px] text-left text-[18px] text-[#000] font-[Roboto] ${className}`}
+      className={`self-stretch bg-[rgba(240,240,240,1)] flex flex-row flex-wrap items-start justify-center pt-8 px-4 md:px-16 pb-10 box-border gap-4 md:gap-6 text-left text-[20px] md:text-[18px] text-[#000] font-[Roboto] ${className}`}
     >
       <div className="h-[1px] w-full border-[rgba(255,255,255,0.2)] border-b-[1px] border-solid box-border" />
       <div className="flex-1 flex flex-col md:flex-row items-start justify-start max-w-full">
-        <div className="flex-1 flex flex-col items-start justify-start gap-[14px] min-w-[203px]">
-          <div className="self-stretch relative text-[20px] leading-[27px]  font-extrabold md:text-[18px] text-[#000]">
+        <div className="flex-1 flex flex-col items-start justify-start gap-4 min-w-[203px]">
+          <div className="self-stretch relative text-[22px] leading-[27px] font-extrabold md:text-[20px]">
             Company
           </div>
-          <div className="self-stretch relative hover:cursor-pointer text-[#000] text-[18px]">
+          <div className="self-stretch relative hover:cursor-pointer text-[#000] text-[20px] md:text-[18px]">
             About Us
           </div>
           <div
-            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[#000] text-[18px]"
+            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[#000] text-[20px] md:text-[18px]"
             onClick={onNewsTextClick}
           >
             News
           </div>
           <div
-            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[#000] text-[18px]"
+            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[#000] text-[20px] md:text-[18px]"
             onClick={onCareersTextClick}
           >
             Careers
           </div>
           <div className="w-full relative hidden">How we work</div>
         </div>
-        <div className="flex-1 flex flex-col items-start justify-start gap-[14px] min-w-[203px]">
-          <div className="self-stretch relative text-[20px] leading-[27px] font-extrabold md:text-[18px]">
+        <div className="flex-1 flex flex-col items-start justify-start gap-4 min-w-[203px]">
+          <div className="self-stretch relative text-[22px] leading-[27px] font-extrabold md:text-[20px]">
             Support
           </div>
           <div
-            className="self-stretch relative cursor-pointer hover:cursor-pointer"
+            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[20px] md:text-[18px]"
             data-scroll-to="accountText"
             onClick={onAccountTextClick}
           >
             Account
           </div>
           <div
-            className="self-stretch relative cursor-pointer hover:cursor-pointer"
+            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[20px] md:text-[18px]"
             onClick={onSupportCenterTextClick}
           >
             Support Center
           </div>
           <div
-            className="self-stretch relative cursor-pointer"
+            className="self-stretch relative cursor-pointer text-[20px] md:text-[18px]"
             onClick={onFAQTextClick}
           >
             FAQ
           </div>
           <div className="w-full relative hidden">Accessibility</div>
         </div>
-        <div className="flex-1 flex flex-col items-start justify-start gap-[14px] min-w-[203px]">
-          <div className="self-stretch relative text-[20px] leading-[27px] font-extrabold md:text-[18px]">
+        <div className="flex-1 flex flex-col items-start justify-start gap-4 min-w-[203px]">
+          <div className="self-stretch relative text-[22px] leading-[27px] font-extrabold md:text-[20px]">
             More
           </div>
           <div
-            className="self-stretch relative cursor-pointer"
+            className="self-stretch relative cursor-pointer text-[20px] md:text-[18px]"
             onClick={onCovidAdvisoryTextClick}
           >
             Covid Advisory
           </div>
           <div
-            className="self-stretch relative cursor-pointer hover:cursor-pointer"
+            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[20px] md:text-[18px]"
             onClick={onAirlineFeesTextClick}
           >
             Airline Fees
           </div>
           <div
-            className="self-stretch relative cursor-pointer hover:cursor-pointer"
+            className="self-stretch relative cursor-pointer hover:cursor-pointer text-[20px] md:text-[18px]"
             onClick={onTipsTextClick}
           >
             Tips
@@ -138,12 +135,12 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           <div className="w-full relative hidden">Quarantine Rules</div>
         </div>
       </div>
-      <div className="flex-1 flex flex-col items-start justify-start gap-[14px] min-w-full shrink-0 text-[16.8px] text-[#e8effd] font-[Inter]">
+      <div className="flex-1 flex flex-col items-start justify-start gap-4 min-w-full shrink-0 text-[18px] text-[#e8effd] font-[Inter]">
         <LocoUILogo />
-        <div className="self-stretch relative text-[18px] leading-[27px] font-[Roboto] text-[#000]">
+        <div className="self-stretch relative text-[20px] leading-[27px] font-[Roboto] text-[#000]">
           Clean, responsive UI library that works out of the box with Locofy.ai
         </div>
-        <div className="flex flex-row items-start justify-start gap-[20px]">
+        <div className="flex flex-row items-start justify-start gap-4">
           <div
             className="h-[30px] w-[30px] relative overflow-hidden shrink-0 cursor-pointer"
             onClick={onEntypoSocialfacebookWithCiContainerClick}

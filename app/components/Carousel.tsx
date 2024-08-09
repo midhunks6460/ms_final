@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export type CarouselType = {
   className?: string;
@@ -8,16 +8,31 @@ export type CarouselType = {
 
 const Carousel: NextPage<CarouselType> = ({ className = "", images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const nextImages = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 2) % images.length);
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setCurrentIndex((prevIndex) => (prevIndex + 2) % images.length);
+    }
   };
 
   const prevImages = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 2 + images.length) % images.length
-    );
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setCurrentIndex(
+        (prevIndex) => (prevIndex - 2 + images.length) % images.length
+      );
+    }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+    }, 500); // Adjust duration to match animation time
+
+    return () => clearTimeout(timer);
+  }, [isAnimating]);
 
   return (
     <div
@@ -29,17 +44,26 @@ const Carousel: NextPage<CarouselType> = ({ className = "", images }) => {
         {images.slice(currentIndex, currentIndex + 2).map((src, index) => (
           <img
             key={index}
-            className="flex-1 h-[600px] w-[900px] object-cover"
+            className={`flex-1 h-[600px] w-[900px] object-cover transition-transform duration-500 ${isAnimating ? "animate-fade" : ""}`}
             loading="lazy"
             alt={`Image ${currentIndex + index + 1}`}
             src={src}
           />
         ))}
       </div>
+      <div className="relative w-full h-[10px] bg-gray-300 rounded">
+        <div
+          className="absolute h-full bg-blue-500 rounded transition-all duration-500"
+          style={{
+            width: `${(((currentIndex + 2) % images.length) / images.length) * 100}%`,
+          }}
+        ></div>
+      </div>
       <div className="flex flex-row items-center justify-center p-[8px] gap-[8px]">
         <button
           className="flex flex-row items-start justify-start p-[8px]"
           onClick={prevImages}
+          disabled={isAnimating}
         >
           <img
             className="h-[24px] w-[24px] relative"
@@ -51,6 +75,7 @@ const Carousel: NextPage<CarouselType> = ({ className = "", images }) => {
         <button
           className="flex flex-row items-start justify-start p-[8px]"
           onClick={nextImages}
+          disabled={isAnimating}
         >
           <img
             className="h-[24px] w-[24px] relative"

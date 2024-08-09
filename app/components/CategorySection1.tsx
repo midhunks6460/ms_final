@@ -1,3 +1,4 @@
+"use client";
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties, useState } from "react";
 import Accordion from "./Accordion";
@@ -6,7 +7,7 @@ export type CategorySection1Type = {
   className?: string;
   rectangle1?: string;
   accordionTitle1?: string;
-  accordionTitle11?: string;    
+  accordionTitle11?: string;
   accordionTitle12?: string;
   accordionTitle13?: string;
 
@@ -80,28 +81,28 @@ const CategorySection1: NextPage<CategorySection1Type> = ({
 
   return (
     <section
-      className={`self-stretch shadow-[0px_3px_16px_rgba(0,_0,_0,_0.08)] rounded-[8px] bg-[#fff] overflow-hidden flex flex-col md:flex-row items-start justify-center max-w-full [row-gap:20px] text-left text-[#334158] font-[Inter] md:justify-between ${className}`}
+      className={`self-stretch shadow-lg rounded-lg bg-[rgba(226,228,234,0.5)] overflow-hidden flex flex-col md:flex-row items-center justify-center max-w-full gap-4 text-left text-[#334158] font-[Inter] md:justify-between ${className}`}
       onClick={onCategorySectionClick}
     >
       <div
-        className="flex-[0.9167] bg-[rgba(226,228,234,0.5)] flex flex-col items-start justify-start border-black px-[40px] box-border gap-[20px] min-w-[624px] max-w-full h-auto md:py-[350px] md:px-[40px] mq850:py-[20px] mq850:px-[20px] overflow-auto"
+        className="flex-[0.9167] bg-[rgba(226,228,234,0.5)] flex flex-col items-start justify-start border-black px-[20px] box-border gap-[20px] min-w-[320px] max-w-full h-auto md:py-[40px] md:px-[40px] overflow-auto"
         style={frameDivStyle}
       >
         <div className="self-stretch flex flex-col items-center gap-[8px]">
           <h1
-            className="m-[0px] self-stretch text-black relative text-inherit leading-[120%] font-bold font-[inherit] text-[32px] md:text-[40px] mq850:text-[24px] mq450:text-[20px] mq450:leading-[26px]" // Adjusted font size and line height for smaller screens
+            className="m-[0px] self-stretch text-black relative text-inherit leading-[120%] font-bold text-[28px] md:text-[40px] border border-gray-300 rounded-lg p-4"
             style={everythingUXNewsletterStyle}
           >
             Everything UX Newsletter
           </h1>
           <div
-            className="self-stretch relative text-[18px] leading-[22px] text-center md:text-left"
+            className="self-stretch relative text-[16px] italic leading-[22px] text-center md:text-left border border-gray-300 rounded-lg p-4"
             style={everythingUXIsStyle}
           >
             {`Everything UX is a top-class newsletter containing everything you need to know about the world of UX and more!`}
           </div>
         </div>
-        <div className="w-full flex flex-col justify-start items-start py-[0px] px-[14px] box-border max-w-full mx-auto">
+        <div className="w-full flex flex-col justify-start items-center py-[0px] px-[14px] box-border max-w-full mx-auto">
           <Accordion
             accordionTitle1={accordionTitle1}
             propColor="#5c5c5c"
@@ -137,9 +138,9 @@ const CategorySection1: NextPage<CategorySection1Type> = ({
         </div>
       </div>
       <img
-        className="h-[400px] md:h-[700px] flex-1 relative max-w-full overflow-hidden object-cover min-w-[400px] mq850:min-w-full"
+        className="h-[300px] md:h-[600px] flex-1 relative max-w-full overflow-hidden object-cover rounded-lg border border-gray-300"
         loading="lazy"
-        alt=""
+        alt="Description of image"
         src="/image.svg.jpg"
       />
     </section>

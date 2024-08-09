@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
+import { useEffect, useState } from "react";
 
 export type CardType = {
   className?: string;
   ellipse2?: string;
   ellipseIcon?: boolean;
   showFrameDiv?: boolean;
+  rating?: number; // Add a rating prop
 };
 
 const Card: NextPage<CardType> = ({
@@ -12,10 +14,19 @@ const Card: NextPage<CardType> = ({
   ellipse2,
   ellipseIcon,
   showFrameDiv,
+  rating = 0, // Default to 0 if no rating is provided
 }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Fade in animation
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <div
-      className={`self-stretch shadow-[0px_3px_16px_rgba(0,_0,_0,_0.08)] rounded-[8px] bg-[#fff] flex flex-col items-center justify-start py-[24px] px-[16px] gap-[24px] text-center text-[16px] text-[#000] font-[Inter] ${className}`}
+      className={`self-stretch shadow-[0px_3px_16px_rgba(0,_0,_0,_0.08)] rounded-[8px] bg-[#fff] flex flex-col items-center justify-start py-[24px] px-[16px] gap-[24px] text-center text-[16px] text-[#000] font-[Inter] ${className} 
+        transform transition-transform duration-300 hover:scale-105 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
     >
       {!ellipseIcon && (
         <img
@@ -35,12 +46,13 @@ const Card: NextPage<CardType> = ({
       {showFrameDiv && (
         <div className="flex flex-row items-start justify-center gap-[6px]">
           {[...Array(5)].map((_, index) => (
-            <img
+            <span
               key={index}
-              className="h-[19px] w-[20px] relative min-h-[19px]"
-              alt=""
-              src="/vector.svg"
-            />
+              className={`h-[19px] w-[20px] relative min-h-[19px]`}
+            >
+              {index < rating ? "★" : "☆"}{" "}
+              {/* Display stars based on the rating */}
+            </span>
           ))}
         </div>
       )}
